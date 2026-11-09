@@ -10,14 +10,6 @@ Original Congress vector artwork meets a pixel rainbow, sparkling stars and a
 
 *Unofficial community project. Built from the [official 40C3 styleguide](https://events.ccc.de/congress/2026/infos/styleguide/).*
 
-## Watch & download
-
-The ready-to-play videos include the full 60-second anthem:
-
-- **[Landscape video · 16:9](https://github.com/benlooningus/40c3-rainbow-fairydust/releases/download/v1.0.0/40c3-fairydust-16x9-sound.mp4)**
-- **[Phone video · 9:16](https://github.com/benlooningus/40c3-rainbow-fairydust/releases/download/v1.0.0/40c3-fairydust-9x16-sound.mp4)**
-- [Release notes and source downloads](https://github.com/benlooningus/40c3-rainbow-fairydust/releases/latest)
-
 ## Two formats, one anthem
 
 | | Landscape | Phone |
