@@ -1,0 +1,11 @@
+# Local environments and Python caches
+.venv/
+__pycache__/
+*.py[cod]
+
+# Generated videos, audio and intermediate exports
+/build/
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
