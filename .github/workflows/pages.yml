@@ -1,0 +1,52 @@
+name: Publish video player
+
+on:
+  push:
+    branches: [main]
+    paths: ['docs/**', 'assets/**', '.github/workflows/pages.yml']
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/configure-pages@v5
+      - name: Assemble static player and existing assets
+        run: |
+          mkdir -p _site/assets _site/media
+          cp docs/index.html docs/player.css docs/player.js docs/landscape.png docs/portrait.png _site/
+          cp assets/40C3_Logo_0.svg assets/jersey-10-latin-400-normal.ttf assets/Hack-Regular.ttf _site/assets/
+          cp -R licenses _site/licenses
+      - name: Fetch published videos without adding them to Git history
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh release download v1.0.0 --pattern '*-sound.mp4' --dir _site/media
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

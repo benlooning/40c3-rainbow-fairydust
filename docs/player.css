@@ -1,0 +1,36 @@
+@font-face{font-family:Jersey;src:url("assets/jersey-10-latin-400-normal.ttf") format("truetype");font-display:swap}
+@font-face{font-family:Hack;src:url("assets/Hack-Regular.ttf") format("truetype");font-display:swap}
+:root{color-scheme:light;--cream:#e1ecd1;--ink:#001300;--lavender:#9198bd;--line:#00130030}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font:14px/1.65 Hack,monospace}
+a{color:inherit;text-underline-offset:4px}
+a:hover{text-decoration-thickness:2px}
+button,a{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:3px solid #f88a30;outline-offset:5px}
+.masthead,main,footer{width:min(1160px,calc(100% - 80px));margin-inline:auto}
+.masthead{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:25px 0;border-bottom:1px solid var(--line);font-size:12px}
+.byline,.source-link{text-decoration:none}.byline span{opacity:.62}
+.intro{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:55px 0 40px}
+.eyebrow{font-size:12px;letter-spacing:.13em;margin:0 0 8px}
+h1,h2{font-family:Jersey,monospace;font-weight:400;line-height:1;letter-spacing:-.01em}
+h1{font-size:clamp(48px,7vw,90px);margin:0 0 15px}
+.description{margin:0;max-width:750px}
+.congress-logo{display:block;flex:0 0 96px;width:96px;height:128px;background:var(--ink);mask:url("assets/40C3_Logo_0.svg") center/contain no-repeat;-webkit-mask:url("assets/40C3_Logo_0.svg") center/contain no-repeat}
+.cinema{border:1px solid var(--ink);background:var(--ink)}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 15px;color:var(--cream)}
+.formats{display:flex;gap:5px}.formats button{cursor:pointer;border:1px solid #e1ecd160;background:transparent;color:var(--cream);font:12px Hack,monospace;padding:9px 13px;border-radius:0}
+.formats button[aria-pressed=true]{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+.formats button:hover{border-color:var(--cream)}
+.duration{font-size:11px;letter-spacing:.04em;white-space:nowrap}.duration span{opacity:.4;margin:0 6px}
+.screen{display:flex;justify-content:center;align-items:center;background:var(--lavender);overflow:hidden}
+video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:var(--lavender)}
+.screen.portrait video{width:auto;max-width:100%;height:min(80vh,960px);aspect-ratio:9/16}
+.video-caption{display:flex;justify-content:space-between;gap:10px;padding:12px 16px;color:var(--cream);font-size:11px}
+.video-caption p{margin:0}.video-caption p:last-child{opacity:.7}
+.playback-error{color:var(--cream);padding:0 16px;font-size:12px}
+.takeaway{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:35px 0 42px}
+h2{font-size:34px;margin:0 0 8px}.takeaway p{font-size:12px;margin:0;opacity:.75}
+.downloads{display:flex;gap:8px;flex-shrink:0}.downloads a{border:1px solid var(--ink);padding:10px 13px;font-size:12px;text-decoration:none}.downloads a:hover{background:var(--ink);color:var(--cream)}
+.downloads span{margin-left:10px}
+footer{border-top:1px solid var(--line);padding:22px 0 30px;font-size:11px;line-height:1.9}footer p{margin:0 0 6px}
+@media(max-width:760px){.masthead,main,footer{width:calc(100% - 36px)}.masthead{padding:18px 0}.byline span{display:none}.intro{padding:35px 0 28px;gap:14px}.congress-logo{flex-basis:62px;width:62px;height:85px}.description{font-size:12px}.wide-only{display:none}.eyebrow{font-size:10px}.toolbar{padding:10px;gap:8px}.formats button{padding:8px 10px}.formats button span{display:none}.duration{font-size:9px}.video-caption{flex-direction:column;gap:3px;padding:10px;font-size:10px}.takeaway{flex-direction:column;align-items:flex-start;gap:18px;padding:28px 0}h2{font-size:30px}.downloads{width:100%}.downloads a{flex:1;text-align:center}.screen.portrait video{height:min(74vh,900px)}}

@@ -6,7 +6,9 @@ A Nyan Cat-inspired Fairydust animation for **40C3**, made by **benlooning**.
 Original Congress vector artwork meets a pixel rainbow, sparkling stars and a
 60-second synthesized anthem. Available in landscape and upright phone formats.
 
-![Animated landscape preview: Fairydust flying over a pixel rainbow beneath the Model Citizens title](docs/preview.gif)
+[![Play the video with sound: Fairydust flying over a pixel rainbow beneath the Model Citizens title](docs/preview.gif)](https://benlooning.github.io/40c3-rainbow-fairydust/)
+
+**[▶ Watch in the video player — with sound, fullscreen and both formats](https://benlooning.github.io/40c3-rainbow-fairydust/)**
 
 *Unofficial community project. Built from the [official 40C3 styleguide](https://events.ccc.de/congress/2026/infos/styleguide/).*
 
@@ -14,6 +16,7 @@ Original Congress vector artwork meets a pixel rainbow, sparkling stars and a
 
 The ready-to-play videos include the full 60-second anthem:
 
+- **[Play online · landscape or upright](https://benlooning.github.io/40c3-rainbow-fairydust/)**
 - **[Landscape video · 16:9](https://github.com/benlooning/40c3-rainbow-fairydust/releases/download/v1.0.0/40c3-fairydust-16x9-sound.mp4)**
 - **[Phone video · 9:16](https://github.com/benlooning/40c3-rainbow-fairydust/releases/download/v1.0.0/40c3-fairydust-9x16-sound.mp4)**
 - [Release notes and source downloads](https://github.com/benlooning/40c3-rainbow-fairydust/releases/latest)
@@ -149,6 +152,11 @@ or recording is included. AI tools assisted the development of the project.
 Keep generated media out of Git: `build/` is ignored. Upload the two `*-sound.mp4`
 files as assets on a GitHub Release so viewers can download them directly.
 The source repository includes everything needed to render them again.
+
+The online player lives in `docs/`. `.github/workflows/pages.yml` publishes it
+to GitHub Pages and fetches the two v1.0.0 release videos into the deployed
+site, keeping generated MP4s out of the Git history. Update the release tag in
+that workflow when publishing a new video version.
 
 When sharing or remixing, credit **benlooning**, link the relevant licenses and
 note your changes. Preserve the upstream font notices when redistributing fonts.

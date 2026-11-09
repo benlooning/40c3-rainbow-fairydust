@@ -5,6 +5,7 @@ __pycache__/
 
 # Generated videos, audio and intermediate exports
 /build/
+/_site/
 
 # Operating system metadata
 .DS_Store
